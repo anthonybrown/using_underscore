@@ -29,14 +29,13 @@ var peoples = {
 	}
 }
 
-_.each(people.names, function (elem, index, list) {
-	peoples.innerHTML += this.getMessage(elem)
-}, people);
+_.each(peoples.names, function (elem, index, list) {
+	people.innerHTML += this.getMessage(elem)
+}, peoples);
 // passing in peoples after iterator
-// as the last argument to the each function
-// will bind peoples to the this pointer.
-// without passing in peoples
-// it would point to the iterator function
-// instead of the getMessage method
-// very handy to pass in the context to the each function.
+// as the last argument to each function
+// that will bind the peoples object
+// to the this pointer of getMessage method
+// passing in the context to the each function
+// is very handy
 
