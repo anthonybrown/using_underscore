@@ -29,9 +29,9 @@ var peoples = {
 	}
 }
 
-_.each(peoples.names, function (elem, index, list) {
-	people.innerHTML += this.getMessage(elem)
-}, peoples);
+_.each(people.names, function (elem, index, list) {
+	peoples.innerHTML += this.getMessage(elem)
+}, people);
 // passing in peoples after iterator
 // as the last argument to the each function
 // will bind peoples to the this pointer.
